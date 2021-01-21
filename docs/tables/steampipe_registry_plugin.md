@@ -4,7 +4,7 @@ The steampipe_registry_plugin table provides information about the plugins that 
 
 ## Examples
 
-#### List available plugins
+### List available plugins
 
 ```sql
 select 

@@ -4,7 +4,7 @@ The steampipe_registry_plugin_version table provides information about the versi
 
 ## Examples
 
-#### List available plugin versions
+### List available plugin versions
 
 ```sql
 select 
@@ -18,7 +18,7 @@ order by
 
 
 
-#### List latest available plugin versions
+### List latest available plugin versions
 
 ```sql
 select 
