@@ -15,8 +15,11 @@ The Steampipe plugin is used to query Steampipe components, such as the availabl
 This plugin currently requires no authentication as it only queries public endpoints.
 
 ### Installation
+
 To download and install the latest steampipe plugin:
+
 ```bash
-$ ./steampipe plugin install steampipe
+$ steampipe plugin install steampipe
 Installing plugin steampipe...
 $
+```
