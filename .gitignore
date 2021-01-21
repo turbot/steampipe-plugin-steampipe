@@ -4,12 +4,41 @@
 *.dll
 *.so
 *.dylib
-
+ 
 # Test binary, built with `go test -c`
 *.test
-
+ 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
-
+ 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+
+#  Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# .tfvars files
+*.tfvars
+
+node_modules
+.DS_Store
+
+.lock/*
+!.lock/.gitkeep
+
+.*.swo
+.*.swp
+
+# test folder for template generation, should never be included
+**/a-test-folder*/*
+
+turbot-templates
+move.sh
+
+# omit .vscode files
+.vscode/*
