@@ -1,3 +1,10 @@
+## v0.1.2 [2021-03-19]
+
+_Bug fixes_
+
+- Use API paging to get full results for `steampipe_registry_plugin` and `steampipe_registry_plugin_version`.
+
+
 ## v0.1.1 [2021-02-25]
 
 _Bug fixes_
