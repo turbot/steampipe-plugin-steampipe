@@ -6,7 +6,7 @@ import (
 
 // Version represents a google artifact repository image version
 type Version struct {
-	Digest	   string
+	Digest     string
 	Name       string    `json:"name,omitempty"`
 	CreateTime time.Time `json:"createTime,omitempty"`
 	UpdateTime time.Time `json:"updateTime,omitempty"`
@@ -14,5 +14,6 @@ type Version struct {
 
 // Versions respresents the object returned from the versions endpoint
 type Versions struct {
-	Versions []Version `json:"versions,omitempty"`
+	Versions      []Version `json:"versions,omitempty"`
+	NextPageToken string    `json:"nextPageToken"`
 }
