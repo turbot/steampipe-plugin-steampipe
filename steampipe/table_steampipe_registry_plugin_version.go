@@ -45,6 +45,20 @@ func tableSteampipeRegistryPluginVersion(ctx context.Context) *plugin.Table {
 				Description: "The time the plugin was last updated.",
 				Type:        proto.ColumnType_TIMESTAMP,
 			},
+			{
+				Name:        "image_annotations",
+				Description: "The annotations from the OCI image manifest.",
+				Type:        proto.ColumnType_JSON,
+				Hydrate:     getImageManifest,
+				Transform:   transform.FromField("annotations"),
+			},
+			{
+				Name:        "image_layers",
+				Description: "The layers from the OCI image manifest.",
+				Type:        proto.ColumnType_JSON,
+				Hydrate:     getImageManifest,
+				Transform:   transform.FromField("layers"),
+			},
 		},
 	}
 }
@@ -64,4 +78,15 @@ func listRegistryPluginVersions(ctx context.Context, d *plugin.QueryData, h *plu
 	}
 	return nil, nil
 
+}
+
+//// HYDRATE FUNCTIONS
+func getImageManifest(ctx context.Context, d *plugin.QueryData, h *plugin.HydrateData) (interface{}, error) {
+	p := h.Item.(registry.PluginVersion)
+	manifest, err := p.GetManifest(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return manifest, err
 }
