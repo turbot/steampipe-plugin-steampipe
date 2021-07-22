@@ -1,7 +1,15 @@
 package registry
 
 import (
+	"context"
+	"encoding/json"
+	"fmt"
+	"io/ioutil"
+	"net/http"
+	"strconv"
 	"time"
+
+	"github.com/turbot/steampipe-plugin-sdk/plugin"
 )
 
 const (
@@ -83,4 +91,36 @@ func tagsForVersion(tagsRaw []Tag, version string) []string {
 	}
 
 	return matches
+}
+
+func (p *PluginVersion) GetManifest(ctx context.Context) (interface{}, error) {
+	log := plugin.Logger(ctx)
+	log.Trace("GetManifest")
+
+	manifest_url := "https://" + defaultRepositoryLocation + "-docker.pkg.dev/v2/" + defaultRepositoryName + "/" +
+		defaultPluginPackageName + "/" + p.ImageName + "/manifests/" + p.Digest
+
+	client := &http.Client{}
+	req, _ := http.NewRequest("GET", manifest_url, nil)
+	req.Header.Set("Accept", "*/*")
+
+	resp, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("Get Manifest failed with error %v", err)
+	}
+
+	if resp.StatusCode != 200 {
+		return nil, fmt.Errorf("Get Manifest failed with response code %s", strconv.Itoa(resp.StatusCode))
+	}
+
+	defer resp.Body.Close()
+	body, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		return nil, fmt.Errorf("Could not read manifest - %v", err)
+	}
+
+	var anyJson map[string]interface{}
+	json.Unmarshal(body, &anyJson)
+
+	return anyJson, nil
 }
