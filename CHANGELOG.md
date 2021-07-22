@@ -1,9 +1,9 @@
-## v0.1.3 [2021-07-20]
+## v0.1.3 [2021-07-22]
 
-_What's new?_
+_Enhancements_
 
-- Updated: `steampipe_registry_plugin_version` to have `image_layers` and `image_annotations` columns that return details about the OCI Image.
-
+- Updated: Add columns `image_annotations` and `image_layers` to `steampipe_registry_plugin_version` table ([#540](https://github.com/turbot/steampipe-plugin-aws/pull/540))
+- Recompiled plugin with [steampipe-plugin-sdk v1.4.1](https://github.com/turbot/steampipe-plugin-sdk/blob/main/CHANGELOG.md#v141--2021-07-20) ([#540](https://github.com/turbot/steampipe-plugin-aws/pull/540))
 
 ## v0.1.2 [2021-03-19]
 
