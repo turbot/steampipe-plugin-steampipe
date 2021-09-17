@@ -1,6 +1,3 @@
 connection "steampipe" {
-  plugin    = "steampipe"                 
+  plugin = "steampipe"
 }
-
-
-    
