@@ -1,44 +1,71 @@
-<p align="center">
-    <h1 align="center">Steampipe Plugin for Steampipe</h1>
-</p>
+ ![image](https://hub.steampipe.io/images/plugins/turbot/steampipe-social-graphic.png)
 
-<p align="center">
-  <a aria-label="Steampipe logo" href="https://steampipe.io">
-    <img src="https://steampipe.io/images/steampipe_logo_wordmark_padding.svg" height="28">
-  </a>
-  <a aria-label="License" href="LICENSE">
-    <img alt="" src="https://img.shields.io/static/v1?label=license&message=Apache-2.0&style=for-the-badge&labelColor=777777&color=F3F1F0">
-  </a>
-</p>
+# Steampipe Plugin for Steampipe
 
-## Query Steampipe with SQL
+Use SQL to query infrastructure including servers, networks, identity and more from Steampipe.
+- **[Get started →](https://hub.steampipe.io/plugins/turbot/steampipe)**
+- Documentation: [Table definitions & examples](https://hub.steampipe.io/plugins/turbot/steampipe/tables)
+- Community: [Slack Channel](https://join.slack.com/t/steampipe/shared_invite/zt-oij778tv-lYyRTWOTMQYBVAbtPSWs3g)
+- Get involved: [Issues](https://github.com/turbot/steampipe-plugin-steampipe/issues)
 
-Use SQL to query the [Steampipe Hub](https://hub.steampipe.io) for plugins, plugin versions and more. For example:
+## Quick Start
 
-```sql
-select * from steampipe_registry_plugin;
-```
-
-Learn about [Steampipe](https://steampipe.io/).
-
-## Get started
-
-**[Table documentation and examples &rarr;](https://hub.steampipe.io/plugins/turbot/steampipe)**
-
-Install the plugin:
+Install the plugin with [Steampipe](https://steampipe.io):
 
 ```shell
 steampipe plugin install steampipe
 ```
 
-## Get involved
+Run a query:
 
-### Community
+```sql
+select name, update_time from steampipe_registry_plugin;
+```
 
-The Steampipe community can be found on [GitHub Discussions](https://github.com/turbot/steampipe/discussions), where you can ask questions, voice ideas, and share your projects.
+## Developing
 
-Our [Code of Conduct](https://github.com/turbot/steampipe/blob/main/CODE_OF_CONDUCT.md) applies to all Steampipe community channels.
+Prerequisites:
 
-### Contributing
+- [Steampipe](https://steampipe.io/downloads)
+- [Golang](https://golang.org/doc/install)
 
-Please see [CONTRIBUTING.md](https://github.com/turbot/steampipe/blob/main/CONTRIBUTING.md).
+Clone:
+
+```sh
+git clone https://github.com/turbot/steampipe-plugin-steampipe.git
+cd steampipe-plugin-steampipe
+```
+
+Build, which automatically installs the new version to your `~/.steampipe/plugins` directory:
+
+```
+make
+```
+
+Configure the plugin:
+
+```
+cp config/* ~/.steampipe/config
+vi ~/.steampipe/config/steampipe.spc
+```
+
+Try it!
+
+```
+steampipe query
+> .inspect steampipe
+```
+
+Further reading:
+
+- [Writing plugins](https://steampipe.io/docs/develop/writing-plugins)
+- [Writing your first table](https://steampipe.io/docs/develop/writing-your-first-table)
+
+## Contributing
+
+Please see the [contribution guidelines](https://github.com/turbot/steampipe/blob/main/CONTRIBUTING.md) and our [code of conduct](https://github.com/turbot/steampipe/blob/main/CODE_OF_CONDUCT.md). All contributions are subject to the [Apache 2.0 open source license](https://github.com/turbot/steampipe-plugin-steampipe/blob/main/LICENSE).
+
+`help wanted` issues:
+
+- [Steampipe](https://github.com/turbot/steampipe/labels/help%20wanted)
+- [Steampipe Plugin](https://github.com/turbot/steampipe-plugin-steampipe/labels/help%20wanted)
