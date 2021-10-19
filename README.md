@@ -68,4 +68,3 @@ Please see the [contribution guidelines](https://github.com/turbot/steampipe/blo
 `help wanted` issues:
 
 - [Steampipe](https://github.com/turbot/steampipe/labels/help%20wanted)
-- [Steampipe Plugin](https://github.com/turbot/steampipe-plugin-steampipe/labels/help%20wanted)
