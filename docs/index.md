@@ -17,7 +17,7 @@ og_image: Need image
 This plugin currently requires no authentication as it only queries public endpoints.
 
 For example:
-Need query and table for example
+Placeholder for example query and table
 
 ## Documentation
 
