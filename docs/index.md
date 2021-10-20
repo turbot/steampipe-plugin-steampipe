@@ -21,7 +21,7 @@ Need query and table for example
 
 ## Documentation
 
-- **[Table definitions & examples →](https://hub.steampipe.io/plugins/turbot/steampipe/tabless)**
+- **[Table definitions & examples →](https://hub.steampipe.io/plugins/turbot/steampipe/tables)**
 
 ## Get started
 
