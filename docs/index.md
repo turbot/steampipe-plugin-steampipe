@@ -17,7 +17,26 @@ og_image: "/images/plugins/turbot/steampipe-social-graphic.png"
 This plugin currently requires no authentication as it only queries public endpoints.
 
 For example:
-Placeholder for example query and table
+
+```sql
+select
+  name,
+  update_time
+from
+  steampipe_registry_plugin
+```
+
+```
++--------------------+---------------------+
+| name               | update_time         |
++--------------------+---------------------+
+| turbot/alicloud    | 2021-09-13 16:18:49 |
+| theapsgroup/gitlab | 2021-09-16 12:22:14 |
+| turbot/aws         | 2021-10-12 12:45:35 |
+| turbot/jira        | 2021-09-22 18:59:46 |
+| turbot/steampipe   | 2021-07-22 20:36:14 |
++--------------------+---------------------+
+```
 
 ## Documentation
 
