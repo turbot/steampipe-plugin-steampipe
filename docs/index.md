@@ -53,10 +53,23 @@ steampipe plugin install steampipe
 ```
 
 ### Credentials
-Placeholder for credentials
+
+| Item | Description |
+| - | - |
+| Credentials | No creds required |
+| Permissions | n/a |
+| Radius | Steampipe automatically connects to the Steampipe registry |
+| Resolution | n/a |
 
 ### Configuration
-Placeholder for configuration
+
+No configuration is needed. Installing the latest steampipe plugin will create a config file (~/.steampipe/config/steampipe.spc) with a single connection named steampipe:
+
+```hcl
+connection "steampipe" {
+  plugin = "steampipe"
+}
+```
 
 ## Get Involved
 
