@@ -12,7 +12,9 @@ og_image: "/images/plugins/turbot/steampipe-social-graphic.png"
 
 # Steampipe
 
-[Steampipe](https://steampipe.io) The Steampipe plugin is used to query Steampipe components, such as the available plugins in the steampipe hub.
+The Steampipe plugin is used to query Steampipe components, such as the available plugins in the Steampipe hub.
+
+[Steampipe](https://steampipe.io) is an open source CLI to instantly query cloud APIs using SQL.
 
 This plugin currently requires no authentication as it only queries public endpoints.
 
