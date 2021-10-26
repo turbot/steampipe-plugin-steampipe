@@ -54,15 +54,6 @@ Download and install the latest Steampipe plugin:
 steampipe plugin install steampipe
 ```
 
-### Credentials
-
-| Item | Description |
-| - | - |
-| Credentials | No creds required |
-| Permissions | n/a |
-| Radius | Steampipe automatically connects to the Steampipe registry |
-| Resolution | n/a |
-
 ### Configuration
 
 No configuration is needed. Installing the latest steampipe plugin will create a config file (`~/.steampipe/config/steampipe.spc`) with a single connection named `steampipe`:
@@ -70,6 +61,8 @@ No configuration is needed. Installing the latest steampipe plugin will create a
 ```hcl
 connection "steampipe" {
   plugin = "steampipe"
+  
+  # token - No token/creds required.
 }
 ```
 
