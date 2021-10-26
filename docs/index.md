@@ -56,17 +56,15 @@ steampipe plugin install steampipe
 
 ### Configuration
 
-No configuration needed.
-
 Installing the latest steampipe plugin will create a config file (`~/.steampipe/config/steampipe.spc`) with a single connection named `steampipe`:
 
 ```hcl
 connection "steampipe" {
   plugin = "steampipe"
-
-  # token - No token/creds required.
 }
 ```
+
+No additional configuration is required.
 
 ## Get Involved
 
