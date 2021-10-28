@@ -5,7 +5,7 @@ icon_url: "/images/plugins/turbot/steampipe.svg"
 brand_color: "#a42a2d"
 display_name: Steampipe
 short_name: steampipe
-description: Steampipe plugin for querying Steampipe components, such as the available plugins in the steampipe hub.
+description: Steampipe plugin for querying Steampipe components, such as the available plugins in the Steampipe hub.
 og_description: "Query Steampipe with SQL! Open source CLI. No DB required."
 og_image: "/images/plugins/turbot/steampipe-social-graphic.png"
 ---
