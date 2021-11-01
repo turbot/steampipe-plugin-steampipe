@@ -42,7 +42,7 @@ from
 
 ## Documentation
 
-- **[Table definitions & examples →](https://hub.steampipe.io/plugins/turbot/steampipe/tables)**
+- **[Table definitions & examples →](/plugins/turbot/steampipe/tables)**
 
 ## Get started
 
