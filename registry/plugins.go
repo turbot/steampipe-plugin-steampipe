@@ -120,7 +120,9 @@ func (p *PluginVersion) GetManifest(ctx context.Context) (interface{}, error) {
 	}
 
 	var anyJson map[string]interface{}
-	json.Unmarshal(body, &anyJson)
+	if err := json.Unmarshal(body, &anyJson); err != nil {
+		return nil, err
+	}
 
 	return anyJson, nil
 }

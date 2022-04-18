@@ -13,7 +13,6 @@ import (
 
 const (
 	defaultBaseURL = "https://artifactregistry.googleapis.com/v1beta2/"
-	userAgent      = "go-steampipe"
 )
 
 // Package represents a google artifact repository package
