@@ -1,6 +1,6 @@
 module github.com/turbot/steampipe-plugin-steampipe
 
-go 1.17
+go 1.18
 
 require github.com/turbot/steampipe-plugin-sdk v1.8.2
 
