@@ -76,4 +76,4 @@ connection "steampipe" {
 ## Get Involved
 
 * Open source: https://github.com/turbot/steampipe-plugin-steampipe
-* Community: [Slack Channel](https://join.slack.com/t/steampipe/shared_invite/zt-oij778tv-lYyRTWOTMQYBVAbtPSWs3g)
+* Community: [Slack Channel](https://steampipe.io/community/join)
