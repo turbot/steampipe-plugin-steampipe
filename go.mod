@@ -2,7 +2,7 @@ module github.com/turbot/steampipe-plugin-steampipe
 
 go 1.18
 
-require github.com/turbot/steampipe-plugin-sdk/v3 v3.3.0
+require github.com/turbot/steampipe-plugin-sdk/v3 v3.3.1
 
 require (
 	github.com/acarl005/stripansi v0.0.0-20180116102854-5a71ef0e047d // indirect
