@@ -2,7 +2,7 @@ module github.com/turbot/steampipe-plugin-steampipe
 
 go 1.19
 
-require github.com/turbot/steampipe-plugin-sdk/v4 v4.1.6
+require github.com/turbot/steampipe-plugin-sdk/v4 v4.1.7
 
 require (
 	github.com/XiaoMi/pegasus-go-client v0.0.0-20210427083443-f3b6b08bc4c2 // indirect
