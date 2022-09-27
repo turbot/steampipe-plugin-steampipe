@@ -3,7 +3,7 @@ package registry
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 	"strconv"
@@ -46,7 +46,7 @@ func ListPackages(projectName, location, repository string) ([]Package, error) {
 			return nil, fmt.Errorf("List packages failed with response code %s", strconv.Itoa(resp.StatusCode))
 		}
 
-		body, err := ioutil.ReadAll(resp.Body)
+		body, err := io.ReadAll(resp.Body)
 		if err != nil {
 			return nil, err
 		}
@@ -92,7 +92,7 @@ func (p *Package) Versions() ([]Version, error) {
 			return nil, fmt.Errorf("List Versions failed with response code %s", strconv.Itoa(resp.StatusCode))
 		}
 
-		body, err := ioutil.ReadAll(resp.Body)
+		body, err := io.ReadAll(resp.Body)
 		if err != nil {
 			return nil, err
 		}
@@ -130,7 +130,7 @@ func (p *Package) Tags() ([]Tag, error) {
 			return nil, fmt.Errorf("List Tags failed with response code %s", strconv.Itoa(resp.StatusCode))
 		}
 
-		body, err := ioutil.ReadAll(resp.Body)
+		body, err := io.ReadAll(resp.Body)
 		if err != nil {
 			return nil, err
 		}
