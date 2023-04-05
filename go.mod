@@ -3,7 +3,6 @@ module github.com/turbot/steampipe-plugin-steampipe
 go 1.19
 
 require (
-	github.com/turbot/steampipe-plugin-sdk/v4 v4.1.13
 	github.com/turbot/steampipe-plugin-sdk/v5 v5.3.0
 )
 
