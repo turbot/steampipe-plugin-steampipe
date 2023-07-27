@@ -5,7 +5,7 @@
 Use SQL to query infrastructure including servers, networks, identity and more from Steampipe.
 - **[Get started →](https://hub.steampipe.io/plugins/turbot/steampipe)**
 - Documentation: [Table definitions & examples](https://hub.steampipe.io/plugins/turbot/steampipe/tables)
-- Community: [Slack Channel](https://steampipe.io/community/join)
+- Community: [Join #steampipe on Slack →](https://turbot.com/community/join)
 - Get involved: [Issues](https://github.com/turbot/steampipe-plugin-steampipe/issues)
 
 ## Quick Start
