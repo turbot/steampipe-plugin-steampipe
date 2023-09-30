@@ -2,7 +2,7 @@ module github.com/turbot/steampipe-plugin-steampipe
 
 go 1.21
 
-require github.com/turbot/steampipe-plugin-sdk/v5 v5.6.0
+require github.com/turbot/steampipe-plugin-sdk/v5 v5.6.1
 
 require (
 	cloud.google.com/go v0.110.4 // indirect
