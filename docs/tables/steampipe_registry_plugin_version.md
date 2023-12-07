@@ -16,14 +16,24 @@ The `steampipe_registry_plugin_version` table provides insights into the version
 ### List available plugin versions
 Explore the different versions of available plugins in a chronological order to better manage updates and ensure compatibility with your system.
 
-```sql
+```sql+postgres
 select 
-    * 
+  * 
 from 
-    steampipe_registry_plugin_version
+  steampipe_registry_plugin_version
 order by
-    name asc,
-    create_time desc;
+  name asc,
+  create_time desc;
+```
+
+```sql+sqlite
+select 
+  * 
+from 
+  steampipe_registry_plugin_version
+order by
+  name asc,
+  create_time desc;
 ```
 
 
@@ -31,7 +41,7 @@ order by
 ### List latest available plugin versions
 Discover the most recent versions of plugins available in the Steampipe registry. This information can be useful when planning updates or investigating compatibility issues.
 
-```sql
+```sql+postgres
 select 
     * 
 from 
@@ -40,4 +50,8 @@ where
     tags ? 'latest'
 order by
     name asc;
+```
+
+```sql+sqlite
+Error: The corresponding SQLite query is unavailable.
 ```

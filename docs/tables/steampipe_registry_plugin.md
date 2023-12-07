@@ -16,9 +16,16 @@ The `steampipe_registry_plugin` table provides insights into Steampipe Registry 
 ### List available plugins
 Explore the variety of plugins that are available within the Steampipe registry. This can help users understand the extent of their customization options and identify potential tools for enhancing their data management capabilities.
 
-```sql
+```sql+postgres
+select 
+  * 
+from 
+  steampipe_registry_plugin;
+```
+
+```sql+sqlite
 select 
     * 
 from 
-    steampipe_registry_plugin
+    steampipe_registry_plugin;
 ```
