@@ -8,6 +8,7 @@ short_name: steampipe
 description: Steampipe plugin for querying Steampipe components, such as the available plugins in the steampipe hub.
 og_description: "Query Steampipe with SQL! Open source CLI. No DB required."
 og_image: "/images/plugins/turbot/steampipe-social-graphic.png"
+engines: ["steampipe", "sqlite", "postgres", "export"]
 ---
 
 # Steampipe
