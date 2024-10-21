@@ -18,13 +18,15 @@ builds:
 
     id: "steampipe"
     binary: "{{ .ProjectName }}.plugin"
+    flags:
+      - -tags=netgo
 
 archives:
   - format: gz
     name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
     files:
       - none*
-checksum:                                                                                                             
+checksum:
   name_template: "{{ .ProjectName }}_{{ .Version }}_SHA256SUMS"
   algorithm: sha256
 changelog:
