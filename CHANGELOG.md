@@ -3,7 +3,7 @@
 _Dependencies_
 
 - Recompiled plugin with Go version `1.24`.
-- Recompiled plugin with [steampipe-plugin-sdk v5.13.0](https://github.com/turbot/steampipe-plugin-sdk/blob/develop/CHANGELOG.md#v5130-2025-07-21) that addresses critical and high vulnerabilities in dependent packages.
+- Recompiled plugin with [steampipe-plugin-sdk v5.13.1](https://github.com/turbot/steampipe-plugin-sdk/blob/develop/CHANGELOG.md#v5131-2025-09-25) that addresses critical and high vulnerabilities in dependent packages.
 
 ## v1.0.0 [2024-10-22]
 
