@@ -43,7 +43,7 @@ func ListPackages(projectName, location, repository string) ([]Package, error) {
 			return nil, err
 		}
 		if resp.StatusCode != 200 {
-			return nil, fmt.Errorf("List packages failed with response code %s", strconv.Itoa(resp.StatusCode))
+			return nil, fmt.Errorf("list packages failed with response code %s", strconv.Itoa(resp.StatusCode))
 		}
 
 		body, err := io.ReadAll(resp.Body)
@@ -89,7 +89,7 @@ func (p *Package) Versions() ([]Version, error) {
 			return nil, err
 		}
 		if resp.StatusCode != 200 {
-			return nil, fmt.Errorf("List Versions failed with response code %s", strconv.Itoa(resp.StatusCode))
+			return nil, fmt.Errorf("list versions failed with response code %s", strconv.Itoa(resp.StatusCode))
 		}
 
 		body, err := io.ReadAll(resp.Body)
@@ -127,7 +127,7 @@ func (p *Package) Tags() ([]Tag, error) {
 		}
 
 		if resp.StatusCode != 200 {
-			return nil, fmt.Errorf("List Tags failed with response code %s", strconv.Itoa(resp.StatusCode))
+			return nil, fmt.Errorf("list tags failed with response code %s", strconv.Itoa(resp.StatusCode))
 		}
 
 		body, err := io.ReadAll(resp.Body)
