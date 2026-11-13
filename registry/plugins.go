@@ -9,7 +9,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/turbot/steampipe-plugin-sdk/v5/plugin"
+	"github.com/turbot/steampipe-plugin-sdk/v6/plugin"
 )
 
 const (
@@ -120,13 +120,13 @@ func (p *PluginVersion) GetManifest(ctx context.Context) (interface{}, error) {
 	// Make the HTTP request
 	resp, err := client.Do(req)
 	if err != nil {
-		return nil, fmt.Errorf("Get Manifest failed with error: %v", err)
+		return nil, fmt.Errorf("get manifest failed with error: %v", err)
 	}
-	defer resp.Body.Close()
+	defer func() { _ = resp.Body.Close() }()
 
 	// Check if the response status is OK
 	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("Get Manifest failed with response code: %d", resp.StatusCode)
+		return nil, fmt.Errorf("get manifest failed with response code: %d", resp.StatusCode)
 	}
 
 	// Read the response body

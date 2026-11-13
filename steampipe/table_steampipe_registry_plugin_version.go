@@ -3,9 +3,9 @@ package steampipe
 import (
 	"context"
 
-	"github.com/turbot/steampipe-plugin-sdk/v5/grpc/proto"
-	"github.com/turbot/steampipe-plugin-sdk/v5/plugin"
-	"github.com/turbot/steampipe-plugin-sdk/v5/plugin/transform"
+	"github.com/turbot/steampipe-plugin-sdk/v6/grpc/proto"
+	"github.com/turbot/steampipe-plugin-sdk/v6/plugin"
+	"github.com/turbot/steampipe-plugin-sdk/v6/plugin/transform"
 	"github.com/turbot/steampipe-plugin-steampipe/registry"
 )
 
@@ -80,7 +80,7 @@ func listRegistryPluginVersions(ctx context.Context, d *plugin.QueryData, h *plu
 
 }
 
-//// HYDRATE FUNCTIONS
+// // HYDRATE FUNCTIONS
 func getImageManifest(ctx context.Context, d *plugin.QueryData, h *plugin.HydrateData) (interface{}, error) {
 	p := h.Item.(registry.PluginVersion)
 	manifest, err := p.GetManifest(ctx)
